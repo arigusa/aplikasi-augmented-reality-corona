@@ -1,0 +1,79 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
+public class MainMenu : MonoBehaviour
+{
+ 
+    public AudioSource buttonsoundapaitu;
+    public AudioSource buttonsoundgejala;
+    public AudioSource buttonsoundperawatan;
+    public AudioSource buttonsoundpencegahan;
+
+    public Text tTitle;
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    public void Play()
+    {
+       SceneManager.LoadScene(1);
+    }
+
+    public void back()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    public void petunjuk()
+    {
+        SceneManager.LoadScene(2);
+    }
+
+    public void seputarcorona()
+    {
+        SceneManager.LoadScene(3);
+
+    }
+   public void apaitucorona()
+   {
+        SceneManager.LoadScene(4);
+        buttonsoundapaitu.PlayOneShot (buttonsoundapaitu.clip);
+   }
+
+
+   public void perawatan()
+   {
+         SceneManager.LoadScene(5);
+         buttonsoundperawatan.PlayOneShot (buttonsoundperawatan.clip);
+   }
+   public void pencegahan()
+   {
+         SceneManager.LoadScene(6);
+         buttonsoundpencegahan.PlayOneShot (buttonsoundpencegahan.clip);
+   }
+
+   public void gejala()
+   {
+          SceneManager.LoadScene(7);
+          buttonsoundgejala.PlayOneShot (buttonsoundgejala.clip);
+   }
+
+   public void exitClicked()
+   {
+          Application.Quit();
+   }
+   
+
+}
